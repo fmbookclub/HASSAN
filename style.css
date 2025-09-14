@@ -93,7 +93,8 @@ section.about {
 }
 
 .project-card {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .project-card-box {
@@ -103,4 +104,68 @@ section.about {
     background-color: darkmagenta;
     border-radius: 5px;
     transition: all 0.5s ease 0s;
+}
+
+.contact {
+    background-color: purple;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+.contact form div>input {
+    background-color: lightskyblue;
+    width: 300px;
+    padding: 5px 8px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+
+
+}
+
+.contact button {
+    background-color: lightskyblue;
+    padding: 10px;
+    font-size: 10px;
+}
+
+.footer {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+@media only screen and (max-width) {
+    header {
+        flex-direction: column;
+    }
+
+    section.hero-section {
+        flex-direction: column;
+        padding: 40px;
+        padding-top: 130px;
+    }
+
+    .hero-img {
+        display: block;
+    }
+
+    section.about {
+        flex-direction: column;
+        padding: 40px;
+    }
+
+    .about-content {
+        margin-left: 0;
+        margin-top: 30px;
+    }
+    .project-card{
+        margin-top: 15px;
+        flex-direction: column;
+    }
+    .project-card-box{
+        width: 100%;
+        margin: 10px 0;
+    }
 }
